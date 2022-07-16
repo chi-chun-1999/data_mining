@@ -9,7 +9,7 @@
 	* [Entropy](ch4/decision_with_entropy.md)
 * [Estimating the Predictive Accuracy](estimating/estimating.md)
 * [Continus]()
-	* [Discretisation](./continus_attritube/continus_attritube.md)
+	* [Discretisation](./continus_attritube/discretisation.md)
 
 
 
