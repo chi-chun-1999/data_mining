@@ -7,7 +7,7 @@
   * [Nearest Neighbour](ch3/nearest\_neighbour.md)
 * [Using Decision Trees for Classification](ch4/TDIDT.md)
 	* [Entropy](ch4/decision_with_entropy.md)
-* [Estimating the Predictive Accuracy](estimate/estimate.md)
+* [Estimating the Predictive Accuracy](estimate/estimating.md)
 
 
 
