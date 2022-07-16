@@ -60,11 +60,58 @@ $$=...=1-\frac{1}{N}\sum_{j=1}^{V}(\frac{1}{N})\sum_{i=1}^{k}f_{ij}^2$$
 
 $$G_{start}$$的計算方式則是每個類別在這個要進行切割的資料集中出現的機率，進行Gini Index的計算，所以說如果有三個類別，在這個資料集的機率分別爲，$$p_1=\frac{4}{24},p_2=\frac{5}{24},p_3=\frac{15}{24}$$，則$$G_{start}=1-\sum_{i=1}^3p_i^2=0.5382$$
 
+## 使用$$\chi^2$$選擇attritube
+
+還有另一種選擇attritube的方式是使用$$\chi^2$$，它的結果爲所有attritube的所有元素對應到class中$$(O-E)^2/E$$的和
+
+$$\chi^2=\sum_{i=1}^{V}\sum_{j=1}^{K}(O_{ij}-E_{ij})^2/E_{ij}$$
+
+其中 
+
+$$E_{ij}=c_i*a_j/a_{sum}$$
+
+
+$$E_{11}=c_1*a_1/a_{sum}=308*100/1000$$
+
+
+![](./pic/DZdoRJh3.png) 
+
+
+所以以上述的例子中，結果爲
+
+$$\chi^2=(27-30.8)^2/30.8-(64-61.6)^2/61.6-...-(171-168)^2/168=1.35$$
+
+最後將資料集中所有的attritube都做一邊找出最大的就是要選擇的
+
+
+
+
+
 
 ## 技巧
 
-在做這個時，可以使用frequency table增加計算的方便性，也能簡化式子的運算。
+在做entropy與Gini Index的計算時，可以使用frequency table增加計算的方便性，也能簡化式子的運算。由以下的例子說明，可以做成第二張圖那樣，有了這個表格 $$E_{new}$$ 就可以進一步進行簡化( $$N=24,\ K=3$$ 以以下的例子說明)：
+
+$$V$$爲class的個數:
+
+$$\sum_{j=1}^V=N$$
+
+ $$E_{new}$$ 的式子可以簡化成：
+
+$$E_{new}=-\sum_{i=1}^{y}p_i\sum_{j=1}^{k}p_j\log_{2}{p_j}=...=-\sum_{j=1}^V\sum_{i=1}^{K}\frac{f_{ij}}{N}\log_{2}{f_{ij}}+\sum_{j=1}^V\frac{N_j}{N}\log_{2}{N_j}$$
 
 
 
+![](./pic/X8uVL5sV.png) 
+![](./pic/w8twpHRZ.png) 
+
+
+所以以age的這個attritube這個爲例，它的 $$E_{new}$$ 爲：
+
+$$(-2\log_{2}2-1\log_{2}1-1\log_{2}1-2\log_{2}2-2\log_{2}2-1\log_{2}1-4\log_{2}4-5\log_{2}5-6\log_{2}6$$
+
+$$+8\log_{2}8+8\log_{2}8+8\log_{2}8)/24=1.2867$$
+
+
+從這個例子中可以看到frequency table 的重要性與方便性，在遇到numerical Attribute 時轉換成nominal Attribute 也能利用這個方式快速計算Information Gain
 
