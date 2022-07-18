@@ -1,8 +1,7 @@
 # Decision選擇attritube的方式
 
-剛剛提到TDIDT會遇到不知道如果選擇attribute，因此有學者提出使用機率中的Entropy來進行attribute的選擇
+剛剛提到TDIDT會遇到不知道如果選擇attritube，因此有學者提出使用機率中的Entropy來進行attritube的選擇，也可以使用 $$\chi^2$$ 作爲attritube選擇的依據
 
-G
 
 ## Entropy
 
@@ -14,17 +13,17 @@ $$E = - \sum_{1}^{K} p_i\log_{2}{p_i}$$
 
 ## ID3演算法進行
 
-在使用Entropy時，會先計算training dataset的$$E_{start}$$，所以假設有k個類別，$$p_i$$爲每個類別在資料集中的機率。
+在使用Entropy時，會先計算training dataset的$$E_{start}$$，所以假設有k個類別，$$p_i$$爲每個類別在資料集中的機率。可以說明class之間的分佈情況，值越大說明了分佈越平均。譬如說class有兩類，各佔有 $$\frac{1}{2}$$ ，則 $$E_{start}=1$$
 
 $$E_{start} = - \sum_{1}^{k} p_i\log_{2}{p_i}$$
 
-接著計算每個attribute的$$E_{new}$$，它的求法爲每個屬性所擁有的值對應到的到每個類別的Entropy的結果進行平均，接著在把這些結果進行加總平均。這裡假設有$$x$$個屬性，每個屬性擁有$$y$$個值，$$p_j$$爲每一個屬性中每個值對應到每個類別的機率。
+接著計算每個attritube的$$E_{new}$$，它的求法爲每個屬性所擁有的值對應到的到每個類別的Entropy的結果進行平均，接著在把這些結果進行加總平均。這裡假設有$$x$$個屬性，每個屬性擁有$$y$$個值，$$p_j$$爲每一個屬性中每個值對應到每個類別的機率。
 
 以下圖情況爲例，在計算age這個屬性時，$$p_j$$分別爲$$p_1=0.125,p_2=0.25,p_3=0.675$$ ![](pic/fRdxVKpM.png)
 
 $$E_{new}=-\sum_{i=1}^{y}p_i\sum_{j=1}^{k}p_j\log_{2}{p_j}$$
 
-要將所有attribute的$$E_{new}$$計算出來
+要將所有attritube的$$E_{new}$$計算出來
 
 最後計算每一個attritube 的Information Gain
 
@@ -36,7 +35,7 @@ $$Information\ Gain=G_i = E_{start}-E_{new_i}$$ （$$E_{new_i}$$有i）
 
 ## C4.5
 
-C4.5時ID3的改良，進一步將ID3得到的Information Gain除於Split Information
+C4.5是ID3的改良，進一步將ID3得到的Information Gain除於Split Information
 
 Split Information的求法爲針對每一個attritube中資料的個數的比率$$\frac{s}{N}$$，也就是說如果有一個attritube，有$$a_1,a_2,a_3$$三個值，分別各有16, 8, 8個instance，則
 
