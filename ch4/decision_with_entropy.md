@@ -1,4 +1,4 @@
-# Entropy
+# Decision選擇attritube的方式
 
 剛剛提到TDIDT會遇到不知道如果選擇attribute，因此有學者提出使用機率中的Entropy來進行attribute的選擇
 
@@ -58,7 +58,11 @@ $$G_{start}$$的計算方式則是每個類別在這個要進行切割的資料�
 
 ## 使用$$\chi^2$$選擇attritube
 
-還有另一種選擇attritube的方式是使用$$\chi^2$$，它的結果爲所有attritube的所有元素對應到class中$$(O-E)^2/E$$的和
+[ $$\chi^2$$的說明 ](https://www.yongxi-stat.com/chi-squared-test-of-independence/)
+
+
+
+還有另一種選擇attritube的方式是使用$$\chi^2$$，它表示觀察值 $$O$$ 與理論值 $$E$$ 之間的偏離程度，因此它的算法爲所有attritube的所有元素對應到class中$$(O-E)^2/E$$的和，觀察值與理論值的差異總和越大，則表示兩變數間越有關聯性。可以將條件機率的概念代入會比較了解卡方檢驗所代表的關聯性問題。
 
 $$\chi^2=\sum_{i=1}^{V}\sum_{j=1}^{K}(O_{ij}-E_{ij})^2/E_{ij}$$
 
@@ -74,7 +78,7 @@ $$E_{11}=c_1*a_1/a_{sum}=308*100/1000$$
 
 $$\chi^2=(27-30.8)^2/30.8-(64-61.6)^2/61.6-...-(171-168)^2/168=1.35$$
 
-最後將資料集中所有的attritube都做一邊找出最大的就是要選擇的。
+最後將資料集中所有的attritube都做一邊找出最大的就是要選擇的，表示這個Attritube與Class之間的關係越相關。
 
 ## 技巧
 
