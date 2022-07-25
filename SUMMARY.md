@@ -12,6 +12,7 @@
 	* [Decision Tree的Pruning](./ch4/overfitting.md)
 	* [使用Decision Tree演算法所面臨的問題](./ch4/problem.md)
 * [Estimating the Predictive Accuracy](estimating/estimating.md)
+	* [測量Classifer的表現](./estimating/measure_the_performance.md)
 * [Continus]()
 	* [Discretisation](./continus_attritube/discretisation.md)
 
