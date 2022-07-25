@@ -10,6 +10,7 @@
 	* [Decision選擇attritube的方式](ch4/decision_with_entropy.md)
 	* [Clash](./ch4/clash.md)
 	* [Decision Tree的Pruning](./ch4/overfitting.md)
+	* [使用Decision Tree演算法所面臨的問題](./ch4/problem.md)
 * [Estimating the Predictive Accuracy](estimating/estimating.md)
 * [Continus]()
 	* [Discretisation](./continus_attritube/discretisation.md)
