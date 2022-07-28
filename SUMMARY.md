@@ -11,6 +11,7 @@
 	* [Clash](./decision_tree/clash.md)
 	* [Decision Tree的Pruning](./decision_tree/overfitting.md)
 	* [使用Decision Tree演算法所面臨的問題](./decision_tree/problem.md)
+	* [Ensemble Decision Tree](./decision_tree/ensemble_decision_tree.md)
 * [Estimating the Predictive Accuracy](estimating/estimating.md)
 	* [測量Classifer的表現](./estimating/measure_the_performance.md)
 * [Continus]()
