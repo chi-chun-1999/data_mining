@@ -1,4 +1,4 @@
-# Decision選擇attribute的方式
+# Decision選擇 attribute 的方式
 
 剛剛提到TDIDT會遇到不知道如果選擇attribute，因此有學者提出使用機率中的Entropy來進行的選擇，也可以使用 $$\chi^2$$ 作爲attribute選擇的依據
 
