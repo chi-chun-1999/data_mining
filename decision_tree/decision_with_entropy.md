@@ -1,6 +1,6 @@
 # Decision選擇attribute的方式
 
-剛剛提到TDIDT會遇到不知道如果選擇attribute，因此有學者提出使用機率中的Entropy來進行attritube的選擇，也可以使用 $$\chi^2$$ 作爲attritube選擇的依據
+剛剛提到TDIDT會遇到不知道如果選擇attribute，因此有學者提出使用機率中的Entropy來進行的選擇，也可以使用 $$\chi^2$$ 作爲attribute選擇的依據
 
 
 ## Entropy
@@ -37,7 +37,7 @@ $$Information\ Gain=G_i = E_{start}-E_{new_i}$$ （$$E_{new_i}$$有i）
 
 C4.5是ID3的改良，進一步將ID3得到的Information Gain除於Split Information
 
-Split Information的求法爲針對每一個attribute中資料的個數的比率$$\frac{s}{N}$$，也就是說如果有一個attritube，有$$a_1,a_2,a_3$$三個值，分別各有16, 8, 8個instance，則
+Split Information的求法爲針對每一個attribute中資料的個數的比率$$\frac{s}{N}$$，也就是說如果有一個，有$$a_1,a_2,a_3$$三個值，分別各有16, 8, 8個instance，則
 
 $$split \ imformation= -\frac{16}{32}\log_{2}{\frac{16}{32}}-\frac{8}{32}\log_{2}{\frac{8}{32}-\frac{8}{32}\log_{2}{\frac{8}{32}}}$$
 
@@ -61,7 +61,7 @@ $$G_{start}$$的計算方式則是每個類別在這個要進行切割的資料�
 
 
 
-還有另一種選擇attribute的方式是使用$$\chi^2$$，它表示觀察值 $$O$$ 與理論值 $$E$$ 之間的偏離程度，因此它的算法爲所有attritube的所有元素對應到class中$$(O-E)^2/E$$的和，觀察值與理論值的差異總和越大，則表示兩變數間越有關聯性。可以將條件機率的概念代入會比較了解卡方檢驗所代表的關聯性問題。
+還有另一種選擇attribute的方式是使用$$\chi^2$$，它表示觀察值 $$O$$ 與理論值 $$E$$ 之間的偏離程度，因此它的算法爲所有的所有元素對應到class中$$(O-E)^2/E$$的和，觀察值與理論值的差異總和越大，則表示兩變數間越有關聯性。可以將條件機率的概念代入會比較了解卡方檢驗所代表的關聯性問題。
 
 $$\chi^2=\sum_{i=1}^{V}\sum_{j=1}^{K}(O_{ij}-E_{ij})^2/E_{ij}$$
 
